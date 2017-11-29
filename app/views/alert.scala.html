@@ -1,0 +1,37 @@
+@(flash: Flash)
+
+<div>
+    @if(flash.get("SUCCESS") != None) {
+    <div class="alert alert-success fade in">
+        <button data-dismiss="alert" class="close">
+            ×
+        </button>
+        <i class="fa-fw fa fa-check"></i>
+        <strong>Success :&nbsp;&nbsp;</strong>
+        <hr style="margin: 8px 0px 7px;">
+        <p style="text-align: justify;"> @flash.get("SUCCESS")</p>
+    </div>
+    }
+    @if(flash.get("ERROR") != None) {
+    <div class="alert alert-danger fade in">
+        <button data-dismiss="alert" class="close">
+            ×
+        </button>
+        <i class="fa-fw fa fa-times"></i>
+        <strong>Error :&nbsp;&nbsp;</strong>
+        <hr style="margin: 8px 0px 7px;">
+        <p style="text-align: justify;"> @flash.get("ERROR")</p>
+    </div>
+    }
+    @if(flash.get("WARN") != None) {
+    <div class="alert alert-warning fade in">
+        <button data-dismiss="alert" class="close">
+            ×
+        </button>
+        <i class="fa-fw fa fa-warning"></i>
+        <strong>Warning :&nbsp;&nbsp; </strong>
+        <hr style="margin: 8px 0px 7px;">
+        <p style="text-align: justify;"> @flash.get("WARN")</p>
+    </div>
+    }
+</div>
